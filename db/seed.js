@@ -1,7 +1,10 @@
 // point to the seeds.json file here.
 const LTData = require('./ltseeds.json');
 const LearnTopic = require('../models/LearnTopic');
+const Game = require('../models/GameSchema');
+const GData = require('./gseeds.json');
 //change this to reflect the models
+
 LearnTopic.remove({})
   .then(() => {
     return LearnTopic.collection.insert(LTData);
@@ -9,9 +12,6 @@ LearnTopic.remove({})
   .then(() => {
     process.exit();
   });
-
-const GData = require('./gseeds.json');
-const Game = require('../models/LearnTopic');
 
 Game.remove({})
   .then(() => {

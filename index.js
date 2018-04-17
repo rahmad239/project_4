@@ -26,6 +26,8 @@ app.get('/', (req, res) => {
   res.render('mainindex');
 });
 
+app.get('/', (req, res) => res.render('gameshow'));
+
 // app.get('/', (request, response) => {
 //   response.send('Hello VIRGIN ISLANDS!!!!!');
 // });
