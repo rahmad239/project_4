@@ -1,4 +1,5 @@
 const mongoose = require('../db/connection');
+
 const LearnTopicSchema = new mongoose.Schema({
   title: String,
   catagory: String,

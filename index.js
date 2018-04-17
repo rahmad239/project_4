@@ -1,7 +1,8 @@
 // // require all of our dependencies
 // const express = require('express');
 // const app = express();
-// const LearnTopic = require('./models/LearnTopic');
+const LearnTopic = require('./models/LearnTopic');
+const Game = require('./models/GameSchema');
 // // const Controller = require("./controller/location");
 // // const methodOverride = require("method-override");
 // // const path = require("path");
@@ -17,12 +18,17 @@
 
 const express = require('express');
 const app = express();
+const hbs = require('hbs');
 
 app.set('view engine', 'hbs');
 
-app.get('/', (request, response) => {
-  response.send('Hello VIRGIN ISLANDS!!!!!');
+app.get('/', (req, res) => {
+  res.render('mainindex');
 });
+
+// app.get('/', (request, response) => {
+//   response.send('Hello VIRGIN ISLANDS!!!!!');
+// });
 
 app.get('/:name', (req, res) => {
   res.send(`hello ${req.params.name}`);
