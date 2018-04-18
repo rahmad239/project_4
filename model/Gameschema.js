@@ -1,6 +1,7 @@
+// export the model
 const mongoose = require('../db/connection');
 
-const GamePlatformSchema = new mongoose.Schema({
+const GameSchema = new mongoose.Schema({
   name: String,
   catagory: String,
   topic: String,
@@ -8,5 +9,5 @@ const GamePlatformSchema = new mongoose.Schema({
   screenshot: String
 });
 
-const Game = mongoose.model('Game', GamePlatformSchema);
+const Game = mongoose.model('Game', GameSchema);
 module.exports = Game;
