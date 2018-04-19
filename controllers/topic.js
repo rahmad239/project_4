@@ -31,21 +31,22 @@ router.get('/:id', (req, res) => {
 //   res.render('topic/topicedit');
 // });
 
-// //new post processing
-// router.post('/topics', (req, res) => {
-//   Topic.create({
-//     title: req.body.title,
-//     catagory: req.body.catagory,
-//     summary: req.body.summary,
-//     resources: req.body.resources,
-//     links: req.body.links,
-//     terms: req.body.terms,
-//     notes: req.body.notes
-//   })
-//     .then(topics => {
-//       res.redirect('/topics');
-//     })
-//     .catch(err => console.log(err));
-// });
+//new post processing
+router.post('/topics', (req, res) => {
+  Topic.create({
+    title: req.body.title,
+    catagory: req.body.catagory,
+    summary: req.body.summary,
+    resources: req.body.resources,
+    links: req.body.links,
+    terms: req.body.terms,
+    notes: req.body.notes
+  })
+    .then(topics => {
+      res.redirect('/topics');
+    })
+    .catch(err => console.log(err));
+});
 
+module.exports = router;
 //these routes should lead to the exact view path folder

@@ -8,15 +8,21 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const path = require('path');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'hbs');
+// app.engine('hbs', expressHbs({ extname: 'hbs', defaultLayout: 'layouts.hbs' }));
+
 app.use('/games', gameControlCenter);
 app.use('/topics', topicControlCenter);
 
 //define our routes including rendering index view
 
 app.get('/', (req, res) => {
-  res.render('mainindex');
+  res.render('landing', { layout: 'layouts.hbs' });
 });
 
 app.get('/games', (request, response) => {
