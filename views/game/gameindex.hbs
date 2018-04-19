@@ -2,7 +2,9 @@
   <h1>GAMES!</h1>
 <h1>Games: Play and Lean</h1>
 
-{{games}} are fun
+{{#each games}} 
+{{name}} is fun </br>
+{{/each}}
 {{!-- <ul>
   {{#each games}}
   <a href="/games/{{id}}"{{name}}></a>

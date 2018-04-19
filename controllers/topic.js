@@ -5,10 +5,10 @@ const hbs = require('hbs');
 
 module.exports = router;
 
-router.get('/games', (req, res) => {
+router.get('/topics', (req, res) => {
   Topic.find({})
     .then(topics => {
-      res.render('topic/topicindex', { topic });
+      res.render('topic/topicindex', { topics });
     })
     .catch(err => console.log(err));
 });
