@@ -1,12 +1,14 @@
 <div> 
-<P> "This is the landing page for the learning topics </P>
-{{#each topics}}
+<P> This is the landing page for the learning topics </P>
 <nav> 
 <a href="/" class="game icon">Home</a>
 <a href="/games" class="game icon">Games</a>
 </nav>
-<h6>{{title}} is a cool thing to learn!</h6>
-<div> </div>
+</div>
 
+
+<div> 
+{{#each topics}}
+<a href="/topics/{{id}}" class="topic card">{{title}}</a>is a cool thing to learn!
 </div>
 {{/each}}

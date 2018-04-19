@@ -11,4 +11,12 @@ router.get('/games', (req, res) => {
     .catch(err => console.log(err));
 });
 
+router.get('/:id', (req, res) => {
+  Game.findOne({ _id: req.params.id })
+    .then(games => {
+      res.render('game/gameshow', games);
+    })
+    .catch(err => console.log(err));
+});
+
 module.exports = router;

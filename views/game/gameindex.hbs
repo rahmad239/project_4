@@ -2,20 +2,19 @@
   <h1>GAMES!</h1>
 <h1>Games: Play and Lean</h1>
 
+<div>
 {{#each games}} 
-{{name}} is fun </br>
+<a href="/games/{{id}}" class="game card">{{name}}</a>is fun
+</div>
 {{/each}}
-{{!-- <ul>
-  {{#each games}}
-  <a href="/games/{{id}}"{{name}}></a>
-  {{/each}}
-</ul> --}}
 
 <nav> 
 <a href="/" class="game icon">Home</a>
 <a href="/topics" class="topic icon">Learning Topics</a>
 </nav>
 </div>
+
+
 {{!-- // games list:
 // const game que
 // //  title, link, Topic (sort by topic?)

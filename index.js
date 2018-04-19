@@ -3,17 +3,15 @@
 const Topic = require('./model/Topic');
 const Game = require('./model/Game');
 const gameControlCenter = require('./controllers/game');
-
+const topicControlCenter = require('./controllers/topic');
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const path = require('path');
 
 app.set('view engine', 'hbs');
-
-// app.use('/games', gameControlCenter);
-
-// // app.use('/topics', topicConctrolCenter);
+app.use('/games', gameControlCenter);
+app.use('/topics', topicControlCenter);
 
 //define our routes including rendering index view
 
@@ -35,10 +33,6 @@ app.get('/topics', (req, res) => {
     res.render('./topic/topicindex', { topics });
   });
 });
-// app.get('/games', (req, res) => {
-//   Game.find({}).then(games) => {
-//   res.render('gameindex',{ games });
-// });
 
 // app.get('/', (request, response) => {
 //   response.send('Hello VIRGIN ISLANDS!!!!!');
