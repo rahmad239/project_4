@@ -1,14 +1,24 @@
 <div> 
 <P> This is the landing page for the learning topics </P>
+<div>
 <nav> 
-<a href="/" class="game icon">Home</a>
+<a href="/" class="home icon">Home</a>
 <a href="/games" class="game icon">Games</a>
 </nav>
-</div>
-
+</br>
+</br>
+</br>
+<div>
 
 <div> 
 {{#each topics}}
 <a href="/topics/{{id}}" class="topic card">{{title}}</a>is a cool thing to learn!
 </div>
 {{/each}}
+<div>
+</div>
+</br>
+</br>
+</br>
+<a href="/topics/new" class="new topic icon">Add a New Topic</a>
+</div>
