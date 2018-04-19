@@ -1,26 +1,19 @@
 // // require all of our dependencies
-const Topic = require('./model/Topicschema');
-const Game = require('./model/Gameschema');
-const gameControlCenter = require('./controllers/game');
-// const topicConctrolCenter = require('./controllers/topic');
-// // const methodOverride = require("method-override");
-// const path = require('path');
-// // create and set up our express app
-// // configure it all to use hbs
 
-// app.get('/', (req, res) => {
-//   LearnTask.find({}).then(function(task) {
-//     res.render('index', { places });
-//   });
-// });
+const Topic = require('./model/Topic');
+const Game = require('./model/Game');
+const gameControlCenter = require('./controllers/game');
 
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const path = require('path');
 
-app.use('/games', gameControlCenter);
-// app.use('/topics', topicConctrolCenter);
 app.set('view engine', 'hbs');
+
+// app.use('/games', gameControlCenter);
+
+// // app.use('/topics', topicConctrolCenter);
 
 //define our routes including rendering index view
 
@@ -28,6 +21,20 @@ app.get('/', (req, res) => {
   res.render('mainindex');
 });
 
+app.get('/games', (request, response) => {
+  Game.find({}).then(function(games) {
+    response.render('./game/gameindex', { games });
+  });
+});
+//the render method should call the location of the view in relation
+//to where you are and the item it is going to render. this is
+//also referenced in the controller
+
+app.get('/topics', (req, res) => {
+  Topic.find({}).then(function(topics) {
+    res.render('./topic/topicindex', { topics });
+  });
+});
 // app.get('/games', (req, res) => {
 //   Game.find({}).then(games) => {
 //   res.render('gameindex',{ games });

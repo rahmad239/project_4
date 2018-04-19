@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Game = require('./model/Gameschema');
+const Game = require('../model/Game');
 const hbs = require('hbs');
 
 router.get('/games', (req, res) => {
@@ -11,4 +11,4 @@ router.get('/games', (req, res) => {
     .catch(err => console.log(err));
 });
 
-module.export = router;
+module.exports = router;

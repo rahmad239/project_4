@@ -3,7 +3,7 @@ const mongoose = require('../db/connection');
 
 const GameSchema = new mongoose.Schema({
   name: String,
-  catagory: String,
+  category: String,
   topic: String,
   url: String,
   screenshot: String

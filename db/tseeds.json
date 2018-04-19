@@ -2,7 +2,7 @@
 [
     {
         "title": "This is the first fake title",
-        "catagory": "Database",
+        "category": "Database",
         "summary": "this is the first fake summery", 
         "resource": "this is the first fake resource",
         "links": "www.goodle.com", 
@@ -12,7 +12,7 @@
     }, 
     {
         "title": "This is the 2nd fake title", 
-        "catagory": "Frame Work",
+        "category": "Frame Work",
         "summary": "this is the 2nd fake summery", 
         "resource": "this is the 2nd fake resource",
         "links": "www.yahoo.com", 

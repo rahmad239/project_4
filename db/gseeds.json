@@ -1,17 +1,16 @@
 [
     {
     "name": "Flexbox Froggy",
-    "catagory": "Style-Sheet Language",
+    "category": "Style-Sheet Language",
     "topic": "CSS",
     "url": "http://flexboxfroggy.com",
     "screenshot": "ImageData"
     }, 
-
     {
     "name": "Try Ruby",
-    "catagory": "Programming Language",
+    "category": "Programming Language",
     "topic": "Ruby",
     "url": "http://tryruby.org/levels/1/challenges",
-    "Screenshot": "ImageData"
+    "screenshot": "ImageData"
     }
 ]
