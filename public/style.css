@@ -1,0 +1,16 @@
+/* font-family: 'Handlee', cursive;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Shadows Into Light', cursive; */
+
+.h1 {
+    font-size: 16px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+body {
+    background-image: url("https://i.imgur.com/ikjowZn.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
