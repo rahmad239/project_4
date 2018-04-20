@@ -1,23 +1,28 @@
-<nav>
-<a href="/games" class="home icon">Cancel</a>
-</nav>
 
-<div class="container">
-<h1> New Game Form </h1>
+
+<div class="intro">
+<h1>New Game</h1>
 </div>
+<div class= "form">
 
 <form action="/games" method="post">
     <label >Game Name</label>
-    <input type= "text" value="" name="name" placeholder="Add Name of the Game..">
-    <label>category</label> 
-    <input type= "text" value="" name="category" placeholder="select category..">
-    <label>topic</label>
-    <input type= "text" value="" name="topic" placeholder="what is the topic..">
-    <label>url</label>
-    {{!-- <input type= "text" value="" name="url" placeholder="Place URL in quotes here">
-    <label>screenshot </label> --}}
-    <input type= "text" value="" name="screenshot" placeholder="fake img">
+    <input type= "text" value="" name="name" placeholder="Add Name of the Game.."></br></br>
+    <label>Category</label> 
+    <input type= "text" value="" name="category" placeholder="select category.."></br></br>
+    <label>Topic</label>
+    <input type= "text" value="" name="topic" placeholder="what is the topic.."></br></br>
+    <label>URL</label>
+    <input type= "text" value="" name="url" placeholder="Place URL in quotes here"></br></br>
+    {{!-- <label>screenshot </label>
+    <input type= "text" value="" name="screenshot" placeholder="fake img"> --}}
 
 <input type = "submit" value = "Post"/>
 </form>
 
+</div>
+<nav> 
+<a href="/games" class="game icon">Cancel</a>
+<a href="/" class="home icon">Home</a>
+<a href="/topics" class="topic icon">Topics</a>
+</nav>

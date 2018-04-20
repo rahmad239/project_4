@@ -5,15 +5,23 @@ delete topic funtion --}}
 {{!-- // Terms: --}}
 
 <div class = "test container">
-<h1>Digging deeper into {{this.title}}... </h1>
-<h4> What is {{this.summary}}?</h4>
-{{this.catagory}}
-{{this.resources}}
-{{this.links}}
-{{this.terms}}
-{{this.notes}}
 
-<div>
+    <div class"intro">  
+        <h1>Digging deeper into {{this.title}}... </h1>
+        <h3> What is {{this.title}}? It is a {{this.catagory}}.</h3>
+    </div>
+
+    <div class=body> 
+        <p>{{this.summary}} </p>
+        <h6>Resources used for this information were: {{this.resources}}.</h6>
+        <h6>More information can be found at: {{this.links}}</h6>
+    </div>
+    
+    <div class="notes"> 
+        <p>{{this.notes}}</p>
+        <ul>{{this.terms}}</ul>
+    </div>
+<div class="remove">
     <form action="/topics/{{this.id}}?_method=delete" method="post">
     <input type="submit" value="Remove">
     </form>
@@ -24,7 +32,6 @@ delete topic funtion --}}
 <a href="/" class="home icon">Home</a>
 <a href="/topics/new" class="new topic icon">Add a New Topic</a>
 <a href="/topics/edit/{{this.id}}"class="edit topic icon">Edit this Topic</a>
-
 <a href="/games" class="game icon">Games</a>
 </nav>
 </div>

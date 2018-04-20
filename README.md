@@ -12,6 +12,7 @@ This is a MEHN app. The stack used is as follows:
 - Handle Bars
 - Nodejs
 - Github was used for storage
+- Css tool: materialize
 
 ####Approach Taken####
 The approach taken to create this app was to: 

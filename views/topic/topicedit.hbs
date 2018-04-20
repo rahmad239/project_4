@@ -1,27 +1,37 @@
+<div class="intro">
+    <h1> Edit Your Topic Post </h1>
+</div>
+
+<div class="form">
 <form action="/topics/{{this.id}}?_method=put" method="post">
-    <h1> EDIT Topic Form </h1>
-<label>title</label>
-    <input type= "text" value="{{this.title}}" name="title" placeholder="What topic does this cover?"/>
- <label>catagory</label> 
-     <input type= "text" value="{{this.catagory}}" name="catagory" placeholder="What catagory does it fall in?">
 
-  <label>summary</label>
-      <input type= "text" value="{{this.summary}}" name="summary" placeholder="Add a summary of the topic">
+<label>Title</label>
+    <input type= "text" value="{{this.title}}" name="title" placeholder="What topic does this cover?"/> </br></br>
+ <label>Catagory</label> 
+     <input type= "text" value="{{this.catagory}}" name="catagory" placeholder="What catagory does it fall in?"> </br></br>
 
-  <label>resources</label>
-      <input type= "text" value="{{this.resources}}" name="resources" placeholder="Resources for reference">
+  <label>Summary</label>
+      <input type= "text" value="{{this.summary}}" name="summary" placeholder="Add a summary of the topic"></br></br>
 
-  <label>links </label>
-      <input type= "text" value="{{this.links}}" name="links" placeholder="Links to resource">
+  <label>Resources</label>
+      <input type= "text" value="{{this.resources}}" name="resources" placeholder="Resources for reference"></br></br>
 
-  <label>terms</label>
-      <input type= "text" value="{{this.terms}}" name="terms" placeholder="What terms are important">
+  <label>Links </label>
+      <input type= "text" value="{{this.links}}" name="links" placeholder="Links to resource"></br></br>
 
- <label>notes</label>
-     <input type= "text" value="{{this.notes}}" name="notes" placeholder="Add notes here..">
+  <label>Terms</label>
+      <input type= "text" value="{{this.terms}}" name="terms" placeholder="What terms are important"></br></br>
 
-<input type = "submit" value = "Add this topic!">
+ <label>Notes</label>
+     <input type= "text" value="{{this.notes}}" name="notes" placeholder="Add notes here.."></br></br>
+
+<input type = "submit" value = "Update">
 </form>
+</div>
 
-<a href="/topics" class="home icon">Cancel</a>
-
+<nav> 
+<a href="/topics" class="cancel icon">Cancel</a>
+<a href="/" class="home icon">Home</a>
+<a href="/topics" class="topic icon">Topics</a>
+<a href="/games" class="game icon">Games</a>
+</nav>
