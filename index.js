@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 app.get('/games', (request, response) => {
   Game.find({}).then(function(games) {
-    response.render('./game/gameindex', { games });
+    response.render('./game/gameindex', { games, layout: 'layouts.hbs' });
   });
 });
 //the render method should call the location of the view in relation
@@ -38,7 +38,7 @@ app.get('/games', (request, response) => {
 
 app.get('/topics', (req, res) => {
   Topic.find({}).then(function(topics) {
-    res.render('./topic/topicindex', { topics });
+    res.render('./topic/topicindex', { topics, layout: 'layouts.hbs' });
   });
 });
 

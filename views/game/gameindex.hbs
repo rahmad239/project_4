@@ -1,19 +1,27 @@
 <div class="container">
-  <h1>GAMES!</h1>
-<h1>Games: Play and Learn</h1>
 
-<div>
-{{#each games}} 
-<a href="/games/{{id}}" class="game card">{{name}}</a>is fun
+<div ="intro">
+  <h1>GAMES</h1>
+  <h3> Play and Learn</h3>
+
+<p> Here are a few games to get you started, be sure to add a few of your own!</p>
 </div>
+
+<div class="body">
+{{#each games}} 
+<a href="/games/{{id}}" class="game card">{{name}}</a> </br>
 {{/each}}
+</div>
 
 <nav> 
 <a href="/" class="home icon">Home</a>
-<a href="/topics" class="topic icon">Learning Topics</a>
+<a href="/topics" class="topic icon">Topics</a>
 <a href="/games/new" class="new game icon">Add a New Game</a>
 </nav>
+
 </div>
+
+
 
 
 {{!-- // games list:
