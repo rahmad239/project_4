@@ -9,9 +9,11 @@ const app = express();
 const hbs = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'hbs');
 // app.engine('hbs', expressHbs({ extname: 'hbs', defaultLayout: 'layouts.hbs' }));

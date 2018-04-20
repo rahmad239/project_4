@@ -1,0 +1,27 @@
+<form action="/topics/{{this.id}}?_method=put" method="post">
+    <h1> EDIT Topic Form </h1>
+<label>title</label>
+    <input type= "text" value="{{this.title}}" name="title" placeholder="What topic does this cover?"/>
+ <label>catagory</label> 
+     <input type= "text" value="{{this.catagory}}" name="catagory" placeholder="What catagory does it fall in?">
+
+  <label>summary</label>
+      <input type= "text" value="{{this.summary}}" name="summary" placeholder="Add a summary of the topic">
+
+  <label>resources</label>
+      <input type= "text" value="{{this.resources}}" name="resources" placeholder="Resources for reference">
+
+  <label>links </label>
+      <input type= "text" value="{{this.links}}" name="links" placeholder="Links to resource">
+
+  <label>terms</label>
+      <input type= "text" value="{{this.terms}}" name="terms" placeholder="What terms are important">
+
+ <label>notes</label>
+     <input type= "text" value="{{this.notes}}" name="notes" placeholder="Add notes here..">
+
+<input type = "submit" value = "Add this topic!">
+</form>
+
+<a href="/topics" class="home icon">Cancel</a>
+

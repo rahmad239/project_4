@@ -24,10 +24,10 @@ router.get('/:id', (req, res) => {
     .catch(err => console.log(err));
 });
 
-// //call edit into a path
-// router.get('/edit', (req, res) => {
-//   res.render('topic/topicedit');
-// });
+//call edit into a path
+router.get('/edit', (req, res) => {
+  res.render('topic/topicedit');
+});
 
 //new post processing
 router.post('/', (req, res) => {
@@ -40,6 +40,44 @@ router.post('/', (req, res) => {
     terms: req.body.terms,
     notes: req.body.notes
   })
+    .then(topics => {
+      res.redirect('/topics');
+    })
+    .catch(err => console.log(err));
+});
+
+// edit post
+router.get('/edit/:id', (req, res) => {
+  Topic.findOne({ _id: req.params.id })
+    .then(topics => {
+      res.render('topic/topicedit', topics);
+    })
+    .catch(err => console.log(err));
+});
+
+router.put('/:id', (req, res) => {
+  Topic.findOneAndUpdate(
+    { _id: req.params.id },
+    {
+      title: req.body.title,
+      catagory: req.body.catagory,
+      summary: req.body.summary,
+      resources: req.body.resources,
+      links: req.body.links,
+      terms: req.body.terms,
+      notes: req.body.notes
+    },
+    {
+      new: true
+    }
+  ).then(topics => {
+    res.redirect('/topics');
+  });
+});
+
+// delete
+router.delete('/:id', (req, res) => {
+  Topic.findOneAndRemove({ _id: req.params.id })
     .then(topics => {
       res.redirect('/topics');
     })

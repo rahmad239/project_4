@@ -12,11 +12,19 @@ delete topic funtion --}}
 {{this.links}}
 {{this.terms}}
 {{this.notes}}
+
+<div>
+    <form action="/topics/{{this.id}}?_method=delete" method="post">
+    <input type="submit" value="Remove">
+    </form>
+</div>
 </div>
 
 <nav> 
 <a href="/" class="home icon">Home</a>
 <a href="/topics/new" class="new topic icon">Add a New Topic</a>
+<a href="/topics/edit/{{this.id}}"class="edit topic icon">Edit this Topic</a>
+
 <a href="/games" class="game icon">Games</a>
 </nav>
 </div>

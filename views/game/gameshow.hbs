@@ -6,9 +6,14 @@
                     {{!-- <img src="{{this.screenshot}}" alt="{{this.name}}"></img> --}}
         <iframe src="{{this.url}}" height="200" width="600"></iframe>
         </div>
+        <form action="/games/{{this.id}}?_method=delete" method="post">
+                <input type="submit" value="Remove">
+                </form>
     </div>
 </div>
 
+
+<a href="/games/edit/{{this.id}}"class="edit game icon">Edit this game</a>
 <a href="/games/new" class="new game icon">Add a New game</a>
 <a href="/" class="home icon">Home</a>
 

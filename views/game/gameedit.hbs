@@ -1,2 +1,21 @@
 {{!-- go to express intro lesson for routing details and for datapassing
 https://git.generalassemb.ly/ga-wdi-lessons/express-intro --}}
+
+
+<div class="container">
+<h1> Edit Game Form </h1>
+</div>
+
+<form action="/games/{{this.id}}?_method=put" method="post">
+    <label >Game Name</label>
+    <input type= "text" value="{{this.name}}" name="name" placeholder="Add Name of the Game.."/>
+    <label>category</label> 
+    <input type= "text" value="{{this.category}}" name="category" placeholder="select category.."/>
+    <label>topic</label>
+    <input type= "text" value="{{this.topic}}" name="topic" placeholder="what is the topic.."/>
+    <label>url</label>
+    <input type= "text" value="{{this.url}}" name="url" placeholder="Place URL in quotes here"/>
+    {{!-- <label>screenshot </label>
+    <input type= "text" value="{{this.screenshot}}" name="screenshot" placeholder="fake img"/> --}}
+<input type = "submit" value = "Update"/>
+</form>
