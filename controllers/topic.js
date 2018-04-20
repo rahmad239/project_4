@@ -3,8 +3,6 @@ const router = express.Router();
 const Topic = require('../model/Topic');
 const hbs = require('hbs');
 
-module.exports = router;
-
 router.get('/topics', (req, res) => {
   Topic.find({})
     .then(topics => {
@@ -32,7 +30,7 @@ router.get('/:id', (req, res) => {
 // });
 
 //new post processing
-router.post('/topics', (req, res) => {
+router.post('/', (req, res) => {
   Topic.create({
     title: req.body.title,
     catagory: req.body.catagory,

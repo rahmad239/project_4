@@ -1,10 +1,27 @@
-<form>
+<form action="/topics" method="post">
+    <h1> New Topic Form </h1>
 <label>title</label>
+    <input type= "text" value="" name="title" placeholder="What topic does this cover?">
  <label>catagory</label> 
+     <input type= "text" value="" name="catagory" placeholder="What catagory does it fall in?">
+
   <label>summary</label>
+      <input type= "text" value="" name="summary" placeholder="Add a summary of the topic">
+
   <label>resources</label>
+      <input type= "text" value="" name="resources" placeholder="Resources for reference">
+
   <label>links </label>
+      <input type= "text" value="" name="links" placeholder="Links to resource">
+
   <label>terms</label>
+      <input type= "text" value="" name="terms" placeholder="What terms are important">
+
  <label>notes</label>
-<input type = "submit" value = "add this topic!">
+     <input type= "text" value="" name="notes" placeholder="Add notes here..">
+
+<input type = "submit" value = "Add this topic!">
 </form>
+
+<a href="/topics" class="home icon">Cancel</a>
+

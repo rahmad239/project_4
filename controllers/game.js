@@ -16,6 +16,21 @@ router.get('/new', (req, res) => {
   res.render('game/gamenew');
 });
 
+router.post('/', (req, res) => {
+  Game.create({
+    name: req.body.name,
+    category: req.body.category,
+    topic: req.body.topic,
+    url: req.body.url,
+    screenshot: req.body.screenshot
+  })
+    .then(games => {
+      res.redirect('/games');
+    })
+    .catch(err => console.log(err));
+});
+
+//show each
 router.get('/:id', (req, res) => {
   Game.findOne({ _id: req.params.id })
     .then(games => {
